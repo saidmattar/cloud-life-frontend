@@ -10,6 +10,29 @@ export const profileCreate = profile => ({
   payload: profile,
 });
 
+export const profileUpdate = profile => ({
+  type: 'PROFILE_UPDATE',
+  payload: profile,
+});
+
+export const profileUpdateRequest = profile => (dispatch, getState) => {
+  let {auth} = getState();
+  return superagent.put(`${__API_URL__}/profiles/${profile._id}`)
+  .set('Authorization', `Bearer ${auth}`)
+  .field('firstName', profile.firstName)
+  .field('lastName', profile.lastName)
+  .field('alias', profile.alias)
+  .field('priority', profile.priority)
+  .field('safeStatus', profile.safeStatus)
+  .attach('avatar', profile.avatar)
+  .field('bio', profile.bio)
+  .then(res => {
+    localStorage.userId = res.body._id;
+    dispatch(profileCreate(res.body));
+    return res;
+  });
+};
+
 export const profileFetchRequest = () => (dispatch, getState) => {
   let {auth} = getState();
   return superagent.get(`${__API_URL__}/profiles/me`)
@@ -20,7 +43,6 @@ export const profileFetchRequest = () => (dispatch, getState) => {
   });
 };
 
-//This is our update method
 export const profileCreateRequest = profile => (dispatch, getState) => {
   let {auth} = getState();
   return superagent.post(`${__API_URL__}/profiles`)
