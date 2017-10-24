@@ -23,7 +23,7 @@ export const cookieFetch = key => {
   return cookies[key];
 };
 
-export const documentToDataUrl = file => {
+export const docToDataUrl = file => {
   return new Promise((resolve, reject) => {
     let reader = new FileReader();
     reader.addEventListener('load', () => resolve(reader.result));
