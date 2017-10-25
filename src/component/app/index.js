@@ -27,9 +27,8 @@ class App extends React.Component {
 
             <Route path="/" component={HomeContainer}/>
             <Route path="/:auth" component={LandingContainer}/>
-            <Route path="/dashboard" component={DashboardContainer}/>
-            // <Route exact path="/settings" component={() => this.props.auth ? <SettingsContainer/> : <Redirect to="/" />}/>
-            // <Route exact path="/dashboard" component={() => this.props.auth ? <DashboardContainer/> : <Redirect to="/" />}/>
+            <Route exact path="/settings" component={() => this.props.auth ? <SettingsContainer/> : <Redirect to="/" />}/>
+            <Route exact path="/dashboard" component={() => this.props.auth ? <DashboardContainer/> : <Redirect to="/" />}/>
 
           <Footer />
           </div>
