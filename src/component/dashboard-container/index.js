@@ -12,33 +12,33 @@ class DashboardContainer extends React.Component {
   render() {
     return (
       <div className="dashboard-container">
-        <Navbar />
+
 
         <h2>Your Dashboard</h2>
 
-        <DocumentForm
-          buttonText="create"
-          onComplete={this.props.docCreate} />
+        </div>
 
-        <GroupForm
-          buttonText="create a group"
-          onComplete={this.props.groupCreate}/>
+        // <DocumentForm
+        //   buttonText="create"
+        //   onComplete={this.props.docCreate} />
+        //
+        // <GroupForm
+        //   buttonText="create a group"
+        //   onComplete={this.props.groupCreate}/>
+        //
+        // <DocumentContainer/>
 
-        <DocumentContainer/>
-
-        <Footer />
-      </div>
     );
   }
 }
 
-let mapStateToProps = state => ({
-  docs: state.docs,
-});
+// let mapStateToProps = state => ({
+  // docs: state.docs,
+// });
 
-let mapDispatchToProps = dispatch => ({
-  docsFetch: () => dispatch(docsFetchRequest()),
-  docCreate: doc => dispatch(docCreateRequest(doc)),
-});
+// let mapDispatchToProps = dispatch => ({
+  // docsFetch: () => dispatch(docsFetchRequest()),
+  // docCreate: doc => dispatch(docCreateRequest(doc)),
+// });
 
-export default connect(mapStateToProps, mapDispatchToProps)(DashboardContainer);
+export default DashboardContainer;
