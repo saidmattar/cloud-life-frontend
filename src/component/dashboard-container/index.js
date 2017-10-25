@@ -12,10 +12,21 @@ class DashboardContainer extends React.Component {
   render() {
     return (
       <div className="dashboard-container">
+        <Navbar />
+
         <h2>Your Dashboard</h2>
+
         <DocumentForm
           buttonText="create"
-          onComplete={this.props.docCreate}/>
+          onComplete={this.props.docCreate} />
+
+        <GroupForm
+          buttonText="create a group"
+          onComplete={this.props.groupCreate}/>
+
+        <DocumentContainer/>
+
+        <Footer />
       </div>
     );
   }
