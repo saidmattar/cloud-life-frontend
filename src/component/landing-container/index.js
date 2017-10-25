@@ -16,12 +16,13 @@ class LandingContainer extends React.Component {
     return (
       <div>
         <h3>Sign in to your Cloud Life Account</h3>
-        <AuthForm />
+        <AuthForm
+        auth={params.auth}
+        redirect={redirect}
+        onComplete={handleComplete}/>
+        buttonText="login"/>
         </div>
-        // <AuthForm
-        // auth={params.auth}
-        // redirect={redirect}
-        // onComplete={handleComplete}/>
+      
 
     );
   }
