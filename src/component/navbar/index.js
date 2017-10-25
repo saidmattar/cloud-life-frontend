@@ -3,12 +3,8 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import Avatar from 'material-ui/Avatar';
 import {tokenDeleteRequest} from '../../action/auth-actions';
-import {profileFetchRequest} from '../../action/profile-actions';
 
 class Navbar extends React.Component {
-  componentDidMount() {
-    if(!this.props.profile) this.props.profileFetch();
-  }
 
   render() {
     return (
@@ -33,7 +29,6 @@ class Navbar extends React.Component {
               <div>
                 <li><Link to="/signup">Signup</Link></li>
                 <li><Link to="/login">Login</Link></li>
-                <li><Link to="/dashboard">Dash</Link></li>
               </div>
             }
           </ul>
@@ -54,7 +49,6 @@ let mapStateToProps = state => ({
 
 let mapDispatchToProps = dispatch => ({
   tokenDelete: () => dispatch(tokenDeleteRequest()),
-  profileFetch: profile => dispatch(profileFetchRequest(profile)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
