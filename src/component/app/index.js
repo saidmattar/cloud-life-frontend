@@ -26,7 +26,7 @@ class App extends React.Component {
           <Navbar />
             <Route path="/" component={HomeContainer}/>
             <Route path="/:auth" component={LandingContainer}/>
-            // <Route path="/login" component={LandingContainer}/>
+            <Route path="/dashboard" component={DashboardContainer}/>
             // <Route exact path="/settings" component={() => this.props.auth ? <SettingsContainer/> : <Redirect to="/" />}/>
             // <Route exact path="/dashboard" component={() => this.props.auth ? <DashboardContainer/> : <Redirect to="/" />}/>
 

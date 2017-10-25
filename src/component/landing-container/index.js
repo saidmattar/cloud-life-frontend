@@ -20,9 +20,9 @@ class LandingContainer extends React.Component {
         auth={params.auth}
         redirect={redirect}
         onComplete={handleComplete}/>
-        buttonText="login"/>
+    
         </div>
-      
+
 
     );
   }
