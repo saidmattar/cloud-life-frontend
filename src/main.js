@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDome from 'react-dom';
+import ReactDom from 'react-dom';
 import App from './component/app';
 import {Provider} from 'react-redux';
 import appCreateStore from './lib/app-create-store';
@@ -18,3 +18,5 @@ class AppContainer extends React.Component {
     );
   }
 }
+
+ReactDom.render(<AppContainer />, document.getElementById('root'));
