@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import DocForm from '../doc-form';
+import DescriptionIcon from 'material-ui/svg-icons/action/description';
 import {docUpdateRequest, docDeleteRequest} from '../../action/document-actions';
 import * as utils from '../../lib/utils';
 // import {GridTile} from 'material-ui/GridList';
@@ -43,6 +44,7 @@ class DocItem extends React.Component {
     // };
 
     return (
+      <i class="material-icons">description</i>
       <GridTile className="doc-item" title={doc.description}>
         <div style={styles.icons}>
           <DeleteIcon style={styles.delete} onClick={() => this.props.docDelete(doc)}/>
@@ -51,7 +53,7 @@ class DocItem extends React.Component {
 
         // {utils.renderIf(!this.state.editing,
         //   <div>
-        //     <img src={photo.url} style={{'width': '100%'}}/>
+        //     <img src={doc.url} style={{'width': '100%'}}/>
         //   </div>
         // )}
 
