@@ -7,6 +7,7 @@ import AuthForm from '../auth-form';
 
 class LandingContainer extends React.Component {
   render() {
+
     let {params} = this.props.match;
     let handleComplete = params.auth === 'login' ?
       this.props.login :
@@ -22,6 +23,7 @@ class LandingContainer extends React.Component {
         onComplete={handleComplete}/>
     
         </div>
+
 
 
     );

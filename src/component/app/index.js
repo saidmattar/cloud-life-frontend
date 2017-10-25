@@ -24,6 +24,7 @@ class App extends React.Component {
         <BrowserRouter>
           <div>
           <Navbar />
+
             <Route path="/" component={HomeContainer}/>
             <Route path="/:auth" component={LandingContainer}/>
             <Route path="/dashboard" component={DashboardContainer}/>

@@ -13,6 +13,7 @@ class DashboardContainer extends React.Component {
     return (
       <div className="dashboard-container">
 
+
         <h2>Your Dashboard</h2>
 
         </div>
@@ -26,6 +27,7 @@ class DashboardContainer extends React.Component {
         //   onComplete={this.props.groupCreate}/>
         //
         // <DocumentContainer/>
+
     );
   }
 }
