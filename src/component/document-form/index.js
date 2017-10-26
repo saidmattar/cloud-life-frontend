@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import * as utils from '../../lib/utils';
 import {docsFetchRequest, docCreateRequest} from '../../action/document-actions';
+import DocItem from '../document-item';
 import RaisedButton from 'material-ui/RaisedButton';
 
 class DocForm extends React.Component {
@@ -32,20 +33,21 @@ class DocForm extends React.Component {
     console.log('THESE IS PROPS', this.props.docCreate);
     console.log('DIS IS DE STATE', this.state);
     this.props.docCreate(this.state);
+    // this.props.app.setState(docs => ({
+    //   docs: [...prevState.docs, this.state],
+    // }));
+    console.log('State after we add a doc', this.state);
   }
 
   render() {
     return (
+
+
       <form
         className="doc-form"
         onSubmit={this.handleSubmit}>
 
-//TODO: Figure out how to get a preview of a doc to show up here
-        {utils.renderIf(this.state.preview || this.state.url,
-          <img src={this.state.preview || this.state.url} style={{'width': '15%'}}/>
-        )}
-
-        <input
+//         <input
           type="file"
           name="doc"
           onChange={this.handleChange}/>

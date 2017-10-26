@@ -32,8 +32,8 @@ class Navbar extends React.Component {
               </div>
               :
               <div>
-                <li><Link to="/signup">Signup</Link></li>
-                <li><Link to="/login">Login</Link></li>
+                <li><Link to="/welcome/signup">Signup</Link></li>
+                <li><Link to="/welcome/login">Login</Link></li>
               </div>
             }
           </ul>

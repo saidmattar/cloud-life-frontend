@@ -21,6 +21,7 @@ class DashboardContainer extends React.Component {
       <div className="dashboard-container">
       <DocumentForm />
 THING
+      <DocumentContainer />
         </div>
     );
   }

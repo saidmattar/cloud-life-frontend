@@ -30,12 +30,12 @@ class App extends React.Component {
           <div>
           <Navbar />
 
-            <Route path="/group" component={() => localStorage.token ?<GroupContainer/> : <Redirect to="/" />}/>
+            <Route exact path="/group" component={() => localStorage.token ?<GroupContainer/> : <Redirect to="/" />}/>
 
-            <Route path="/" component={HomeContainer}/>
-            <Route path="/:auth" component={LandingContainer}/>
-            <Route path="/settings" component={() => localStorage.token ? <SettingsContainer/> : <Redirect to="/" />}/>
-            <Route path="/dashboard" component={() => localStorage.token ? <DashboardContainer/> : <Redirect to="/" />}/>
+            <Route exact path="/" component={HomeContainer}/>
+            <Route path="/welcome/:auth" component={LandingContainer}/>
+            <Route exact path="/settings" component={() => localStorage.token ? <SettingsContainer/> : <Redirect to="/" />}/>
+            <Route exact path="/dashboard" component={() => localStorage.token ? <DashboardContainer/> : <Redirect to="/" />}/>
             {console.log('Logging props from app component', this.props)}
           <Footer />
           </div>

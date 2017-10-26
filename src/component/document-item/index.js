@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import DocForm from '../doc-form';
+import DocForm from '../document-form';
 import DescriptionIcon from 'material-ui/svg-icons/action/description';
 import {docUpdateRequest, docDeleteRequest} from '../../action/document-actions';
 import * as utils from '../../lib/utils';
@@ -44,12 +44,13 @@ class DocItem extends React.Component {
     // };
 
     return (
-      <i class="material-icons">description</i>
+
       <GridTile className="doc-item" title={doc.description}>
         <div style={styles.icons}>
           <DeleteIcon style={styles.delete} onClick={() => this.props.docDelete(doc)}/>
           <EditIcon style={styles.edit} onClick={this.toggleEdit}/>
         </div>
+        </GridTile>
 
         // {utils.renderIf(!this.state.editing,
         //   <div>
@@ -57,14 +58,13 @@ class DocItem extends React.Component {
         //   </div>
         // )}
 
-        {utils.renderIf(this.state.editing,
-          <DocForm
-            buttonText = "update"
-            doc = {doc}
-            toggle = {this.toggleEdit}
-            onComplete = {this.props.docUpdate}/>
-        )}
-        </GridTile>
+        // {utils.renderIf(this.state.editing,
+        //   <DocForm
+        //     buttonText = "update"
+        //     doc = {doc}
+        //     toggle = {this.toggleEdit}
+        //     onComplete = {this.props.docUpdate}/>
+        // )}
     );
   }
 }
