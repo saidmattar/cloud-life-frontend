@@ -40,7 +40,11 @@ export const docCreateRequest = doc => (dispatch, getState) => {
   .then(res => {
     dispatch(docCreate(res.body));
     return res;
-  });
+  }).catch(
+    err => {
+      console.log('Hello!!'  , err)
+    }
+  );
 };
 
 export const docUpdateRequest = doc => (dispatch, getState) => {

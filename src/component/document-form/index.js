@@ -1,5 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import * as utils from '../../lib/utils';
+import {docsFetchRequest, docCreateRequest} from '../../action/document-actions';
 import RaisedButton from 'material-ui/RaisedButton';
 
 class DocForm extends React.Component {
@@ -27,9 +29,9 @@ class DocForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.onComplete(this.state)
-    .then(() => this.setState({description: '', preview: '', doc: null}))
-    .then(() => this.props.toggle ? this.props.toggle() : undefined);
+    console.log('THESE IS PROPS', this.props.docCreate);
+    console.log('DIS IS DE STATE', this.state);
+    this.props.docCreate(this.state);
   }
 
   render() {
@@ -54,10 +56,19 @@ class DocForm extends React.Component {
           value={this.state.description}
           onChange={this.handleChange}/>
 
-        <RaisedButton label={this.props.buttonText} type="submit" />
+        <RaisedButton label="IMMA BUTTUN" type="submit" />
       </form>
     );
   }
 }
 
-export default DocForm;
+let mapStateToProps = state => ({
+  docs: state.docs,
+});
+
+let mapDispatchToProps = dispatch => ({
+  docsFetch: () => dispatch(docsFetchRequest()),
+  docCreate: doc => dispatch(docCreateRequest(doc)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(DocForm);
