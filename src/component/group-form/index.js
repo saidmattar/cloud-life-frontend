@@ -7,9 +7,11 @@ class GroupForm extends React.Component {
     super(props);
 
     //TODO
-    this.state = this.props.group ?
+    this.state = this.props.group;
+
+    /* ?
       {...this.props.group, preview: ''} :
-      {description: '', preview: '', doc: null};
+      {description: '', preview: '', doc: null};*/
 
 
     this.handleChange = this.handleChange.bind(this);
@@ -19,21 +21,13 @@ class GroupForm extends React.Component {
   handleChange(e) {
     let {name} = e.target;
     if(name === 'description') this.setState({description: e.target.value});
-    if(name === 'group') {
-      let {files} = e.target;
-      let doc = files[0];
-      this.setState({doc});
-      utils.docToDataUrl(doc)
-      .then(preview => this.setState({preview}))
-      .catch(console.error);
-    }
+    if(name === 'groupName') this.setState({groupName: e.target.value});
   }
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.onComplete(this.state)
-    .then(() => this.setState({description: '', preview: '', doc: null}))
-    .then(() => this.props.toggle ? this.props.toggle() : undefined);
+    .then(() => this.setState({description: '', groupName: ''}));
   }
 
   render() {
@@ -44,7 +38,8 @@ class GroupForm extends React.Component {
 
         <input
           type="text"
-          name="group"
+          name="groupName"
+          value={this.state.groupName}
           onChange={this.handleChange}/>
 
         <input

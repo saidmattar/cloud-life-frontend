@@ -11,6 +11,9 @@ import SettingsContainer from '../setting-container';
 import DashboardContainer from '../dashboard-container';
 import {BrowserRouter, Route, Redirect} from 'react-router-dom';
 
+import GroupContainer from '../group-container';
+
+
 class App extends React.Component {
 
   componentDidMount() {
@@ -24,6 +27,8 @@ class App extends React.Component {
         <BrowserRouter>
           <div>
           <Navbar />
+
+            <Route path="/group" component={GroupContainer}/>
 
             <Route path="/" component={HomeContainer}/>
             <Route path="/:auth" component={LandingContainer}/>

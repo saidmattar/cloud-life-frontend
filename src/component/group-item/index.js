@@ -2,8 +2,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 import GroupForm from '../group-form';
 import DescriptionIcon from 'material-ui/svg-icons/action/description';
-import {docUpdateRequest} from '../../action/group-actions';
+import {groupUpdateRequest} from '../../action/group-actions';
 import * as utils from '../../lib/utils';
+
+import {GridTile} from 'material-ui/GridList';
+
 
 class GroupItem extends React.Component {
   constructor(props) {
@@ -21,8 +24,26 @@ class GroupItem extends React.Component {
   render() {
     let {group} = this.props;
 
+    const styles= {
+      gridList: {
+        'min-width': '45%',
+        'position': 'relative',
+      },
+      icons: {
+        'position': 'absolute',
+        'top': '5%',
+      },
+      edit: {
+        'color': '#ddd',
+        'left': '10%',
+      },
+      delete: {
+        'color': '#ddd',
+        'left': '2%',
+      },
+    };
+
     return (
-      <i class="material-icons">description</i>
       <GridTile className="group-item" title={group.description}>
         <div style={styles.icons}>
           <EditIcon style={styles.edit} onClick={this.toggleEdit}/>
