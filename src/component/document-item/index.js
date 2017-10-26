@@ -27,9 +27,9 @@ class DocItem extends React.Component {
     return (
       <div>
         <ul>
-          <li className="doc-item">
-          {doc.description}
-          <a href={doc.url}> link to {doc.description}</a>
+            <li className="doc-item">
+            {doc.description}
+            <a href={doc.url}> link to {doc.description}</a>
           </li>
         </ul>
       </div>
