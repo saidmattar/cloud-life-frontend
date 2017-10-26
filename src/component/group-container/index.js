@@ -13,26 +13,24 @@ class GroupContainer extends React.Component {
 
   render() {
 
-    const styles = {
-      root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around',
-      },
-    };
 
     return (
       <div className="group-container">
+      {console.log('THIS.PROPS in group cont', this.props)}
+      {console.log('tHIS IS PROPS.GROUPS', this.props.groups)}
         <h2>Your Groups</h2>
-
       
+        <GroupForm/>
+        <GroupItem/>
+        {console.log('state in mapStateToProps in groups', this.state)}
+
       </div>
     );
   }
 }
 
 let mapStateToProps = state => ({
-  groups: state.groups,
+  groups: state.group,
 });
 
 let mapDispatchToProps = dispatch => ({

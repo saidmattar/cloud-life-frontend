@@ -7,14 +7,9 @@ import {docCreateRequest, docsFetchRequest} from '../../action/document-actions.
 import * as utils from '../../lib/utils';
 
 class DashboardContainer extends React.Component {
-  // <h2>Your Dashboard</h2>
-  // THIS IS A DASHBOARD
-  // <DocumentForm
-  // buttonText="upload a document"
-  // onComplete={this.props.docCreate()}/>
-  //
-  // <DocumentContainer/>
-  // <GroupContainer/>
+  componentWillMount() {
+    this.props.docsFetch();
+  }
 
   render() {
     return (

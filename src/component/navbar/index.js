@@ -26,7 +26,6 @@ class Navbar extends React.Component {
                 <li onClick={this.props.tokenDelete}><Link to="/">Logout</Link></li>
                 <li><Link to="/settings">Settings</Link></li>
                 <li><Link to="/dashboard">Dashboard</Link></li>
-
                 <li><Link to="/group">Grouppppppppp</Link></li>
 
               </div>
