@@ -28,7 +28,7 @@ class App extends React.Component {
           <div>
           <Navbar />
 
-            <Route path="/group" component={GroupContainer}/>
+            <Route path="/group" component={() => localStorage.token ?<GroupContainer/> : <Redirect to="/" />}/>
 
             <Route path="/" component={HomeContainer}/>
             <Route path="/:auth" component={LandingContainer}/>
