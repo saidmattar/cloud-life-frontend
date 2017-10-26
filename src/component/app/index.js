@@ -7,7 +7,7 @@ import {tokenSet} from '../../action/auth-actions';
 import LandingContainer from '../landing-container';
 import DocumentForm from '../document-form';
 import Footer from '../footer';
-// import SettingsContainer from '../settings-container';
+import SettingsContainer from '../setting-container';
 import DashboardContainer from '../dashboard-container';
 import {BrowserRouter, Route, Redirect} from 'react-router-dom';
 
@@ -27,9 +27,9 @@ class App extends React.Component {
 
             <Route path="/" component={HomeContainer}/>
             <Route path="/:auth" component={LandingContainer}/>
-            <Route exact path="/settings" component={() => this.props.auth ? <SettingsContainer/> : <Redirect to="/" />}/>
-            <Route exact path="/dashboard" component={() => this.props.auth ? <DashboardContainer/> : <Redirect to="/" />}/>
-
+            <Route path="/settings" component={() => localStorage.token ? <SettingsContainer/> : <Redirect to="/" />}/>
+            <Route path="/dashboard" component={() => localStorage.token ? <DashboardContainer/> : <Redirect to="/" />}/>
+            {console.log('Logging props from app component', this.props)}
           <Footer />
           </div>
         </BrowserRouter>

@@ -89,4 +89,4 @@ class AuthForm extends React.Component {
   }
 }
 
-export default AuthForm
+export default AuthForm;
