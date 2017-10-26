@@ -17,9 +17,9 @@ export const groupUpdate = group => ({
 
 export const groupFetchRequest = () => (dispatch, getState) => {
   let {auth} = getState();
-  return superagent.get(`${__API_URL__}/groups/me`)
-  .set('Authorization', `Bearer ${auth}`)
+  return superagent.get(`${__API_URL__}/groups`)
   .then(res => {
+    console.log('res body for groups', res.body);
     dispatch(groupSet(res.body));
     return res;
   });

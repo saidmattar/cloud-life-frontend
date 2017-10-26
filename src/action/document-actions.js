@@ -22,10 +22,12 @@ export const docDelete = doc => ({
 });
 
 export const docsFetchRequest = docs => (dispatch, getState) => {
+  console.log('ARE WE HERE YET')
   let {auth} = getState();
-  return superagent.get(`${__API_URL__}/docs/me`)
+  return superagent.get(`${__API_URL__}/docs`)
   .set('Authorization', `Bearer ${auth}`)
   .then(res => {
+    console.log('res body', res.body);
     dispatch(docsFetch(res.body.data));
     return res;
   });

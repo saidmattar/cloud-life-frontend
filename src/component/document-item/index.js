@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import DocForm from '../doc-form';
+import DocForm from '../document-form';
 import DescriptionIcon from 'material-ui/svg-icons/action/description';
 import {docUpdateRequest, docDeleteRequest} from '../../action/document-actions';
 import * as utils from '../../lib/utils';
@@ -24,32 +24,16 @@ class DocItem extends React.Component {
   render() {
     let {doc} = this.props;
 
-    // const styles= {
-    //   gridList: {
-    //     'min-width': '45%',
-    //     'position': 'relative',
-    //   },
-    //   icons: {
-    //     'position': 'absolute',
-    //     'top': '5%',
-    //   },
-    //   edit: {
-    //     'color': '#ddd',
-    //     'left': '10%',
-    //   },
-    //   delete: {
-    //     'color': '#ddd',
-    //     'left': '2%',
-    //   },
-    // };
-
     return (
-      <i class="material-icons">description</i>
-      <GridTile className="doc-item" title={doc.description}>
-        <div style={styles.icons}>
-          <DeleteIcon style={styles.delete} onClick={() => this.props.docDelete(doc)}/>
-          <EditIcon style={styles.edit} onClick={this.toggleEdit}/>
-        </div>
+      <div>
+        <ul>
+            <li className="doc-item">
+            {doc.description}
+            <a href={doc.url}> link to {doc.description}</a>
+          </li>
+        </ul>
+      </div>
+
 
         // {utils.renderIf(!this.state.editing,
         //   <div>
@@ -57,14 +41,13 @@ class DocItem extends React.Component {
         //   </div>
         // )}
 
-        {utils.renderIf(this.state.editing,
-          <DocForm
-            buttonText = "update"
-            doc = {doc}
-            toggle = {this.toggleEdit}
-            onComplete = {this.props.docUpdate}/>
-        )}
-        </GridTile>
+        // {utils.renderIf(this.state.editing,
+        //   <DocForm
+        //     buttonText = "update"
+        //     doc = {doc}
+        //     toggle = {this.toggleEdit}
+        //     onComplete = {this.props.docUpdate}/>
+        // )}
     );
   }
 }
