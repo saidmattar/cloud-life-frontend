@@ -12,9 +12,9 @@ class SettingsContainer extends React.Component {
   render() {
     return(
       <div className="settings-container">
-      {utils.renderIf(this.props.auth && !this.props.profile,
         <div className="profile-form-container">
           <h2>Create your profile</h2>
+
           <ProfileForm
             buttonText="create"
             onComplete={this.props.profileCreate}/>
