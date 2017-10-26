@@ -24,8 +24,9 @@ class GroupContainer extends React.Component {
     return (
       <div className="group-container">
         <h2>Your Groups</h2>
+        <GroupForm/>
+        <GroupItem/>
 
-      
       </div>
     );
   }

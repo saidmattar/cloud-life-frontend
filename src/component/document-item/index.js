@@ -24,33 +24,16 @@ class DocItem extends React.Component {
   render() {
     let {doc} = this.props;
 
-    // const styles= {
-    //   gridList: {
-    //     'min-width': '45%',
-    //     'position': 'relative',
-    //   },
-    //   icons: {
-    //     'position': 'absolute',
-    //     'top': '5%',
-    //   },
-    //   edit: {
-    //     'color': '#ddd',
-    //     'left': '10%',
-    //   },
-    //   delete: {
-    //     'color': '#ddd',
-    //     'left': '2%',
-    //   },
-    // };
-
     return (
+      <div>
+        <ul>
+          <li className="doc-item">
+          {doc.description}
+          <a href={doc.url}> link to {doc.description}</a>
+          </li>
+        </ul>
+      </div>
 
-      <GridTile className="doc-item" title={doc.description}>
-        <div style={styles.icons}>
-          <DeleteIcon style={styles.delete} onClick={() => this.props.docDelete(doc)}/>
-          <EditIcon style={styles.edit} onClick={this.toggleEdit}/>
-        </div>
-        </GridTile>
 
         // {utils.renderIf(!this.state.editing,
         //   <div>

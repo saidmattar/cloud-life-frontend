@@ -5,13 +5,19 @@ import * as utils from '../../lib/utils';
 import AuthForm from '../auth-form';
 
 class LandingContainer extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state =  this.props.history.push("/dashboard")
+
   render() {
     let {params} = this.props.match;
     let handleComplete = params.auth === 'login' ?
       this.props.login :
       this.props.signup;
 
-    let redirect = path => this.props.history.replace(path);
+    let redirect = path => this.props.history.push(path);
+
+
     return (
       <div>
         <h3>Signin to your Cloud Life Account</h3>
