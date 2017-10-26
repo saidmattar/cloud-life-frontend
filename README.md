@@ -10,6 +10,7 @@
 Said, Michelle, Isaac
 
 ## Description of our Service
+
 Cloud Life is your life, in the cloud: a secure document storage solution for anyone who wants to keep their documents online.
 
 Users can create accounts which allow them to upload documents, files, photos, and more to an online bucket on Amazon's S3. Users can also create and join groups, allowing them to quickly share files with other group members.
