@@ -23,7 +23,7 @@ export const docDelete = doc => ({
 
 export const docsFetchRequest = docs => (dispatch, getState) => {
   let {auth} = getState();
-  return superagent.get(`${__API_URL__}/docs/me`)
+  return superagent.get(`${__API_URL__}/docs`)
   .set('Authorization', `Bearer ${auth}`)
   .then(res => {
     dispatch(docsFetch(res.body.data));
@@ -40,7 +40,11 @@ export const docCreateRequest = doc => (dispatch, getState) => {
   .then(res => {
     dispatch(docCreate(res.body));
     return res;
-  });
+  }).catch(
+    err => {
+      console.log('Hello!!'  , err)
+    }
+  );
 };
 
 export const docUpdateRequest = doc => (dispatch, getState) => {
