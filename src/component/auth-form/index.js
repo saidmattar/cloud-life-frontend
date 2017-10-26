@@ -1,3 +1,5 @@
+import './_auth-form.scss';
+
 import React from 'react';
 import * as utils from '../../lib/utils';
 

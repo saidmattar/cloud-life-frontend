@@ -4,7 +4,7 @@ import DocForm from '../doc-form';
 import DescriptionIcon from 'material-ui/svg-icons/action/description';
 import {docUpdateRequest, docDeleteRequest} from '../../action/document-actions';
 import * as utils from '../../lib/utils';
-// import {GridTile} from 'material-ui/GridList';
+import {GridTile} from 'material-ui/GridList';
 // import EditIcon from 'material-ui/svg-icons/editor/mode-edit';
 // import DeleteIcon from 'material-ui/svg-icons/content/delete-sweep';
 
