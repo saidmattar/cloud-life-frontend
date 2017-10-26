@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {signupRequest, loginRequest} from '../../action/auth-actions';
 import * as utils from '../../lib/utils';
-// import {stringify} from 'querystring';
 import AuthForm from '../auth-form';
 
 class LandingContainer extends React.Component {
@@ -21,7 +20,7 @@ class LandingContainer extends React.Component {
         redirect={redirect}
         onComplete={handleComplete}/>
 
-        </div>
+      </div>
 
 
     );
