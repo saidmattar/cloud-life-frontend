@@ -5,7 +5,7 @@ let validateProfile = profile => {
   return profile;
 };
 
-export default (state=null, action) => {
+export default (state={}, action) => {
   let {type, payload} = action;
   switch(type) {
   case 'TOKEN_DELETE': return null;

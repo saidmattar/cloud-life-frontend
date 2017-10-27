@@ -16,11 +16,15 @@ class GroupContainer extends React.Component {
         <h2>Your Groups</h2>
 
         <div>
-        {this.props.groups.map(group => <GroupItem key={group._id} group={group}/>)}
+        {this.props.groups.data.length ?
+          <div>
+            {this.props.groups.data.map(group => <GroupItem key={group._id} group={group}/>)}
+          </div>
+          :
+          undefined}
         </div>
 
-        <GroupForm
-        buttonText="submit"/>
+        <GroupForm buttonText="submit"/>
 
         // {console.log('state in mapStateToProps in groups', this.props)}
 
@@ -30,7 +34,8 @@ class GroupContainer extends React.Component {
 }
 
 let mapStateToProps = state => ({
-  groups: state.groups.data,
+  groups: state.groups,
+  // docs: state.documents.data,
 });
 
 let mapDispatchToProps = dispatch => ({
