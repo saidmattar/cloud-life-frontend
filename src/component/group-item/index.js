@@ -25,20 +25,16 @@ class GroupItem extends React.Component {
 
     return (
       <div>
-        <ul>
-            <li className="group-item">
             {group.description}
-
-          </li>
-        </ul>
+            {this.props.profiles.map(profile => {<div key={profile._id}>{profile}</div>;})}
       </div>
     );
   }
 }
 
 let mapStateToProps = state => ({
-  profiles: state.profiles,
-  documents: state.documents,
+  profiles: state.profiles.data,
+  documents: state.documents.data,
 });
 let mapDispatchToProps = dispatch => ({
   groupFetch: group => dispatch(groupFetchRequest(group)),
