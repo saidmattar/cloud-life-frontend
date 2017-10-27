@@ -53,7 +53,6 @@ export const profileCreateRequest = profile => (dispatch, getState) => {
   .field('bio', profile.bio)
   .field('lastName', profile.lastName)
   .field('firstName', profile.firstName)
-  // .attach('avatar', profile.avatar)
   .then(res => {
     console.log('res from the profile', res.body);
     localStorage.userId = res.body._id;
