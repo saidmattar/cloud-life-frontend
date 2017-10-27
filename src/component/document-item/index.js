@@ -29,7 +29,7 @@ class DocItem extends React.Component {
         <ul>
             <li className="doc-item">
             {doc.description}
-            <a href={doc.url}> link to {doc.description}</a>
+            <a href={doc.url}> download {doc.description}</a>
           </li>
         </ul>
       </div>

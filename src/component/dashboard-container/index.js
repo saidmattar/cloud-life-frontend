@@ -21,10 +21,11 @@ class DashboardContainer extends React.Component {
     return (
       <div className="dashboard-container">
 
-      <h2>Upload and View Your Documents</h2>
+      <h2>Upload Your Documents</h2>
 
       <DocumentForm />
 
+      <h2 className="somepadding">Your Uploaded Documents</h2>
       <DocumentContainer />
         </div>
     );
