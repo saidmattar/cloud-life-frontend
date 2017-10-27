@@ -4,28 +4,20 @@ import * as utils from '../../lib/utils';
 class ProfileForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = props.profile ?
-      {...props.profile, preview: ''} :
-      {bio: '', preview: '', alias: '', avatar: null, firstName: '', lastName: ''};
+    this.state = this.props.profile
+    ? {firstName: this.props.profile.firstName, lastName: this.props.profile.lastName, bio: this.props.profile.bio}
+    : {firstName: '', lastName: '', bio: ''};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-// TO DO: CHANGE THIS BLOCK
-//   handleChange(e) {
-//     let {type, name} = e.target;
-//     if(name === 'bio') this.setState({bio: e.target.value});
-//     if(name === 'avatar') {
-//       let {files} = e.target;
-//       let avatar = files[0];
-//       this.setState({avatar});
-//
-//       utils.photoToDataUrl(avatar)
-//       .then(preview => this.setState({preview}))
-//       .catch(console.error);
-//     }
-//   }
+  handleChange(e) {
+    let {bio, alias, firstName, lastName} = e.target;
+    if(name === 'firstName') this.setState({firstName: e.target.value});
+    if(name === 'lastName') this.setState({lastName: e.target.value});
+    if(name === 'bio') this.setState({bio: e.target.value});
+  }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -70,7 +62,7 @@ class ProfileForm extends React.Component {
 
         <button type="submit">{this.props.buttonText}</button>
       </form>
-//something to think about here: we want to be able to display a person's groups too
+
     );
   }
 }

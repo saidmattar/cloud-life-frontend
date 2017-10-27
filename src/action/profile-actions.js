@@ -35,9 +35,11 @@ export const profileUpdateRequest = profile => (dispatch, getState) => {
 
 export const profileFetchRequest = () => (dispatch, getState) => {
   let {auth} = getState();
+  console.log('Made it here to this place');
   return superagent.get(`${__API_URL__}/profiles`)
   .set('Authorization', `Bearer ${auth}`)
   .then(res => {
+    console.log('Profile thing', res.body)
     dispatch(profileSet(res.body));
     return res;
   });

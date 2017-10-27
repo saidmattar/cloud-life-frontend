@@ -4,9 +4,7 @@ import GroupForm from '../group-form';
 import DescriptionIcon from 'material-ui/svg-icons/action/description';
 import {groupFetchRequest} from '../../action/group-actions';
 import * as utils from '../../lib/utils';
-
 import {GridTile} from 'material-ui/GridList';
-
 
 class GroupItem extends React.Component {
   constructor(props) {
@@ -23,13 +21,14 @@ class GroupItem extends React.Component {
 
   render() {
     let {group} = this.props;
-    console.log('PROPS', this.props);
+    console.log('HUZZAH ITS PROPS', this.props);
 
     return (
       <div>
         <ul>
             <li className="group-item">
             {group.description}
+
           </li>
         </ul>
       </div>
@@ -37,7 +36,10 @@ class GroupItem extends React.Component {
   }
 }
 
-let mapStateToProps = state => ({});
+let mapStateToProps = state => ({
+  profiles: state.profiles,
+  documents: state.documents,
+});
 let mapDispatchToProps = dispatch => ({
   groupFetch: group => dispatch(groupFetchRequest(group)),
 });
