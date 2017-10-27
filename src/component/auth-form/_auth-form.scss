@@ -1,7 +1,10 @@
 form {
   input {
-    border: solid .5vw black;
+    border: solid 1px white;
     padding: 0.7em;
     margin: 0.5em;
+    width: 0 auto;
+    display: inline-block;
+    float: left;
   }
 }

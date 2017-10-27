@@ -5,11 +5,29 @@ $color-success: #77ff7a;
 $color-white: #fff;
 $color-black: #000;
 $color-lightgrey: #B5BAC3;
-$color-grey: #7A7D84;
-$color-darkgrey: #6E7177;
+$grey: #7A7D84;
+$darkgrey: #6E7177;
 $color-blue: #3a6087;
+$blue: #50819e;
+$green: #509e6c;
 
 $pad: 0.5em;
 
 $font-primary: 'Lato', sans-serif;
 $font-secondary: 'Roboto Mono', monospace;
+
+
+.fields {
+  border: white 1px solid;
+  display: inline-block;
+  float: left;
+}
+
+button {
+  border: $color-lightgrey 1px solid;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
+  text-shadow: 0 0 10px rgba(0,0,0,0.2);
+  width: 300px;
+  height: 35px;
+  background-color: $darkgrey;
+}

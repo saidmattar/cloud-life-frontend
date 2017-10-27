@@ -1,15 +1,25 @@
 @import '../../../src/style/_vars.scss';
 
-header {
-  background: $color-blue;
-  color: $color-white;
-  text-decoration: none;
-  list-style-type: none;
+@import '../../../src/style/_reset.scss';
+
+// header {
+//   height: 100%;
+//   padding: 0;
+//   margin: 0;
+// }
+
+.nav-bar {
+ background-color: $darkgrey;
+  color: white;
+  height: 100%;
+  margin-bottom: 30px;
 }
 
 li {
-  list-style-type: none;
-  list-style: none;
-  text-decoration: none;
-  color: $color-white;
-}
+   border-radius: 4px;
+   font-family: "arial-black";
+   font-size: 14px;
+   color: #FFF;
+   padding: 8px 12px;
+   cursor: pointer;
+ }

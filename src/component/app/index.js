@@ -37,7 +37,7 @@ class App extends React.Component {
             <Route exact path="/settings" component={() => localStorage.token ? <SettingsContainer/> : <Redirect to="/" />}/>
             <Route exact path="/dashboard" component={() => localStorage.token ? <DashboardContainer/> : <Redirect to="/" />}/>
             {console.log('Logging props from app component', this.props)}
-          <Footer />
+        
           </div>
         </BrowserRouter>
       </div>

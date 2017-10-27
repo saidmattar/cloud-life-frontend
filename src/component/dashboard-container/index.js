@@ -1,3 +1,5 @@
+import './_dashboard-container.scss';
+
 import React from 'react';
 import {connect} from 'react-redux';
 import DocumentForm from '../document-form';
@@ -18,8 +20,12 @@ class DashboardContainer extends React.Component {
   render() {
     return (
       <div className="dashboard-container">
+
+      <h2>Upload Your Documents</h2>
+
       <DocumentForm />
-THING
+
+      <h2 className="somepadding">Your Uploaded Documents</h2>
       <DocumentContainer />
         </div>
     );
