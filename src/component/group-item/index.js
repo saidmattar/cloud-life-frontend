@@ -26,12 +26,10 @@ class GroupItem extends React.Component {
   render() {
     let {group} = this.props;
 
-
-    console.log('HIIIII', this.props.doc);
     return (
       <div>
-        <h2>We are in the item</h2>
-
+        <h2>Group:</h2>
+        <p>{group.groupName}</p>
         <p>{group.description}</p>
         {this.props.profiles.data ?
           <div>
