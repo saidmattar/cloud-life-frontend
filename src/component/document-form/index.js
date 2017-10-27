@@ -58,7 +58,7 @@ class DocForm extends React.Component {
           value={this.state.description}
           onChange={this.handleChange}/>
 
-        <RaisedButton label="Upload" type="submit" />
+        <button label="Upload" type="submit">Submit</button>
       </form>
     );
   }

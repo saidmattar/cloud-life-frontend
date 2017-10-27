@@ -22,3 +22,12 @@ $font-secondary: 'Roboto Mono', monospace;
   display: inline-block;
   float: left;
 }
+
+button {
+  border: $color-lightgrey 1px solid;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
+  text-shadow: 0 0 10px rgba(0,0,0,0.2);
+  width: 300px;
+  height: 35px;
+  background-color: $darkgrey;
+}
