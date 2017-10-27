@@ -10,7 +10,7 @@ import * as utils from '../../lib/utils';
 class DocumentContainer extends React.Component {
 
   render() {
-    // console.log('PROPS', this.props);
+  
     return (
       <div className="document-container">
       {this.props.docs.map(doc => <DocItem key={doc._id} doc={doc}/>)}

@@ -5,8 +5,7 @@ import DescriptionIcon from 'material-ui/svg-icons/action/description';
 import {docUpdateRequest, docDeleteRequest} from '../../action/document-actions';
 import * as utils from '../../lib/utils';
 import {GridTile} from 'material-ui/GridList';
-// import EditIcon from 'material-ui/svg-icons/editor/mode-edit';
-// import DeleteIcon from 'material-ui/svg-icons/content/delete-sweep';
+
 
 class DocItem extends React.Component {
   constructor(props) {
@@ -35,19 +34,6 @@ class DocItem extends React.Component {
       </div>
 
 
-        // {utils.renderIf(!this.state.editing,
-        //   <div>
-        //     <img src={doc.url} style={{'width': '100%'}}/>
-        //   </div>
-        // )}
-
-        // {utils.renderIf(this.state.editing,
-        //   <DocForm
-        //     buttonText = "update"
-        //     doc = {doc}
-        //     toggle = {this.toggleEdit}
-        //     onComplete = {this.props.docUpdate}/>
-        // )}
     );
   }
 }

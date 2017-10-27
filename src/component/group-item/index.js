@@ -15,26 +15,21 @@ class GroupItem extends React.Component {
     };
     this.handleClick = this.handleClick.bind(this);
   }
-  // componentWillReceiveProps() {
-  //   this.props.documents;
-  // }
+
 
   handleClick(group, profile) {
     console.log('handleclick for doc', group);
-    // console.log('handleclick group', group);
-    // console.log('handleclick profile', profile);
+
     this.props.groupUpdate(group, profile);
   }
 
   render() {
     let {group} = this.props;
-    // console.log('HUZZAH ITS PROPS', this.props);
 
-    console.log('HIIIII', this.props.doc);
     return (
       <div>
-        <h2>We are in the item</h2>
-
+        <h2>Group:</h2>
+        <p>{group.groupName}</p>
         <p>{group.description}</p>
         {this.props.profiles.data ?
           <div>
@@ -50,26 +45,20 @@ class GroupItem extends React.Component {
         }
       </div>
 
-//This might not work
-        // {this.props.doc.map(doc => {
-        //   return <div
-        //   onClick={() => this.handleClick(group, doc)}
-        //   key={doc._id}>{doc.description}</div>;}
-      // )}
     );
   }
 }
 
 let mapStateToProps = state => ({
   profiles: state.profiles,
-  // documents: state.documents.data,
+
   documents: [],
 });
 let mapDispatchToProps = dispatch => ({
   groupFetch: group => dispatch(groupFetchRequest(group)),
   groupUpdate: (group, profile) => dispatch(groupUpdateRequest(group, profile)),
   docsFetch: () => dispatch(docsFetchRequest()),
-  //this might not work//
+
   groupDocUpdate: (group, doc) => dispatch(groupUpdateRequest(group, doc)),
 
 });

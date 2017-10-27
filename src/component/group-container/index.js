@@ -11,8 +11,7 @@ class GroupContainer extends React.Component {
   render() {
     return (
       <div className="group-container">
-      // {console.log('THIS.PROPS in group cont', this.props)}
-      // {console.log('tHIS IS PROPS.GROUPS', this.props.groups)}
+
         <h2>Your Groups</h2>
 
         <div>
@@ -26,7 +25,7 @@ class GroupContainer extends React.Component {
 
         <GroupForm buttonText="submit"/>
 
-        // {console.log('state in mapStateToProps in groups', this.props)}
+
 
       </div>
     );
@@ -35,7 +34,7 @@ class GroupContainer extends React.Component {
 
 let mapStateToProps = state => ({
   groups: state.groups,
-  // docs: state.documents.data,
+
 });
 
 let mapDispatchToProps = dispatch => ({
