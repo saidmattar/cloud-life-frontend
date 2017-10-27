@@ -1,15 +1,23 @@
 @import '../../../src/style/_vars.scss';
 
-header {
-  background: $color-blue;
-  color: $color-white;
-  text-decoration: none;
-  list-style-type: none;
+@import '../../../src/style/_reset.scss';
+
+
+.nav-bar {
+ background: linear-gradient(#1E5621, white);
+  text-align:right;
+  width: auto;
 }
 
-li {
-  list-style-type: none;
-  list-style: none;
-  text-decoration: none;
-  color: $color-white;
-}
+
+ // a {
+ //
+ //   display: inline-block;
+ //   border-radius: 4px;
+ //   font-family: "arial-black";
+ //   font-size: 14px;
+ //   color: #FFF;
+ //   padding: 8px 12px;
+ //   cursor: pointer;
+ //
+ // }
