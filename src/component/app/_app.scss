@@ -27,27 +27,42 @@ h1 {
 }
 
 .center {
-  padding: 100px 50px;
-  margin: 0 auto;
+  width: 0 auto;
 }
 
 .smallbox {
-  height: 300px;
+  height: 250px;
   width: 350px;
+  padding: 2px;
   float: left;
   border-radius: 4px;
   margin: 0 auto;
-  background-color: $blue;
+  background-color: rgba(23, 42, 53, 0.48);
+}
+
+p {
+  color: white;
+  text-align: center;
+  padding-top: 25em;
 }
 
 #box1 {
   float: left;
+  display: inline-block;
+  margin: 3%;
+  padding: 60px;
 }
 
 #box3 {
   float: left;
+  display: inline-block;
+  margin: 3%;
+    padding: 60px;
 }
 
 #box2 {
   float: left;
+  display: inline-block;
+  margin: 3%;
+    padding: 60px;
 }
