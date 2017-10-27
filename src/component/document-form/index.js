@@ -33,9 +33,7 @@ class DocForm extends React.Component {
     console.log('THESE IS PROPS', this.props.docCreate);
     console.log('DIS IS DE STATE', this.state);
     this.props.docCreate(this.state);
-    // this.props.app.setState(docs => ({
-    //   docs: [...prevState.docs, this.state],
-    // }));
+    
     console.log('State after we add a doc', this.state);
   }
 

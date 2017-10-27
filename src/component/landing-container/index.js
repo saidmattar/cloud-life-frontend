@@ -5,9 +5,7 @@ import * as utils from '../../lib/utils';
 import AuthForm from '../auth-form';
 
 class LandingContainer extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state =  this.props.history.push("/dashboard")
+
 
   render() {
     let {params} = this.props.match;
