@@ -31,8 +31,9 @@ export const groupCreateRequest = group => (dispatch, getState) => {
   let {auth} = getState();
   return superagent.post(`${__API_URL__}/group`)
   .set('Authorization', `Bearer ${auth}`)
-  .field('groupName', group.groupName)
-  .field('description', group.description)
+  .send(group)
+  // .field('groupName', group.groupName)
+  // .field('description', group.description)
   .then(res => {
     console.log('Res', res.body);
     localStorage.userId = res.body._id;

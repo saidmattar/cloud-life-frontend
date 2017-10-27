@@ -15,9 +15,9 @@ class GroupItem extends React.Component {
     };
     this.handleClick = this.handleClick.bind(this);
   }
-  componentWillReceiveProps() {
-    this.props.documents;
-  }
+  // componentWillReceiveProps() {
+  //   this.props.documents;
+  // }
 
   handleClick(group, profile) {
     console.log('handleclick for doc', group);
@@ -35,26 +35,33 @@ class GroupItem extends React.Component {
       <div>
         <h2>We are in the item</h2>
 
-        {group.description}
-        {this.props.profiles.map(profile => {
-          return <div
-          onClick={() => this.handleClick(group, profile)}
-          key={profile._id}>{profile.firstName}</div>;}
-        )}
+        <p>{group.description}</p>
+        {this.props.profiles.data ?
+          <div>
+            {this.props.profiles.data.map(profile => {
+              return <div
+              onClick={() => this.handleClick(group, profile)}
+              key={profile._id}>{profile.firstName}
+              </div>;}
+            )}
+          </div>
+          :
+          undefined
+        }
+      </div>
 
 //This might not work
-        {this.props.doc.map(doc => {
-          return <div
-          onClick={() => this.handleClick(group, doc)}
-          key={doc._id}>{doc.description}</div>;}
-        )}
-      </div>
+        // {this.props.doc.map(doc => {
+        //   return <div
+        //   onClick={() => this.handleClick(group, doc)}
+        //   key={doc._id}>{doc.description}</div>;}
+      // )}
     );
   }
 }
 
 let mapStateToProps = state => ({
-  profiles: state.profiles.data,
+  profiles: state.profiles,
   // documents: state.documents.data,
   documents: [],
 });

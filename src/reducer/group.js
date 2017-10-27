@@ -5,7 +5,7 @@ let validateGroup = group => {
   return group;
 };
 
-export default (state=null, action) => {
+export default (state={}, action) => {
   let {type, payload} = action;
   switch(type) {
   case 'TOKEN_DELETE': return null;
