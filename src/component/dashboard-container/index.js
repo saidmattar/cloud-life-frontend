@@ -19,7 +19,7 @@ class DashboardContainer extends React.Component {
     return (
       <div className="dashboard-container">
       <DocumentForm />
-THING
+
       <DocumentContainer />
         </div>
     );

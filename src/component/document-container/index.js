@@ -11,15 +11,9 @@ class DocumentContainer extends React.Component {
     // console.log('PROPS', this.props);
     return (
       <div className="document-container">
-      <h2>SOMETHING IS HERE IN THE DOCUMENT CONTAINER</h2>
-
-
+      <h2>Upload and View Your Documents</h2>
       {this.props.docs.map(doc => <DocItem key={doc._id} doc={doc}/>)}
 
-
-      <ul>
-        <li>A thing</li>
-      </ul>
       </div>
     );
   }
