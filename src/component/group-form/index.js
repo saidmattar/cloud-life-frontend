@@ -8,8 +8,8 @@ import RaisedButton from 'material-ui/RaisedButton';
 class GroupForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.group ? {...this.props.group, description: ''} :
-    {description: '', groupName: '', group: null};
+    this.state = this.props.group ? {description: this.props.group.description, groupName: this.props.group.groupName} :
+    {description: '', groupName: ''};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -48,6 +48,7 @@ class GroupForm extends React.Component {
 
         <RaisedButton label={this.props.buttonText} type="submit" />
       </form>
+
     );
   }
 }

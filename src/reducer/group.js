@@ -9,8 +9,8 @@ export default (state=null, action) => {
   let {type, payload} = action;
   switch(type) {
   case 'TOKEN_DELETE': return null;
-  case 'GROUP_SET': return validateGroup(payload);
-  case 'GROUP_CREATE': return validateGroup(payload);
+  case 'GROUP_SET': return payload;
+  case 'GROUP_CREATE': return payload;
   default: return state;
   }
 };

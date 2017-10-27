@@ -17,6 +17,7 @@ export const groupUpdate = group => ({
 
 export const groupFetchRequest = () => (dispatch, getState) => {
   let {auth} = getState();
+  console.log('HERE WE ARE!!!');
   return superagent.get(`${__API_URL__}/groups`)
   .then(res => {
     console.log('res body for groups', res.body);
@@ -26,25 +27,30 @@ export const groupFetchRequest = () => (dispatch, getState) => {
 };
 
 export const groupCreateRequest = group => (dispatch, getState) => {
+  console.log('GROUP groupcr', group);
   let {auth} = getState();
-  return superagent.post(`${__API_URL__}/groups`)
+  return superagent.post(`${__API_URL__}/group`)
   .set('Authorization', `Bearer ${auth}`)
-  .field('name', group.name)
+  .field('groupName', group.groupName)
   .field('description', group.description)
   .then(res => {
+    console.log('Res', res.body);
     localStorage.userId = res.body._id;
     dispatch(groupCreate(res.body));
     return res;
   });
 };
 
-export const groupUpdateRequest = group => (dispatch, getState) => {
+export const groupUpdateRequest = (group, profile) => (dispatch, getState) => {
   let {auth} = getState();
-  return superagent.put(`${__API_URL__}/groups/${group._id}`)
+  console.log('LOGGED PROFILE UPDATEGROUP THING', group);
+  console.log('LOGGITY LOG', profile);
+  return superagent.put(`${__API_URL__}/group/${group._id}`)
   .set('Authorization', `Bearer ${auth}`)
-  .field('description', group.description)
-  .field('groupName', group.groupName)
+  .set('Content-Type', 'application/json')
+  .send(profile)
   .then(res => {
+    console.log('ressssss', res);
     dispatch(groupUpdate(group));
     return res;
   });

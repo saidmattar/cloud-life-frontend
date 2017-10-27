@@ -9,8 +9,8 @@ export default (state=null, action) => {
   let {type, payload} = action;
   switch(type) {
   case 'TOKEN_DELETE': return null;
-  case 'PROFILE_SET': return validateProfile(payload);
-  case 'PROFILE_CREATE': return validateProfile(payload);
+  case 'PROFILE_SET': return payload;
+  case 'PROFILE_CREATE': return payload;
   default: return state;
   }
 };

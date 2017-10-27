@@ -19,7 +19,7 @@ class SettingsContainer extends React.Component {
             buttonText="create"
             onComplete={this.props.profileCreate}/>
       </div>
-        )}
+        
       </div>
     );
   }
