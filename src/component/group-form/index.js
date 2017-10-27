@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {groupsFetchRequest, groupCreateRequest} from '../../action/group-actions';
 import GroupItem from '../group-item';
 import * as utils from '../../lib/utils';
-import RaisedButton from 'material-ui/RaisedButton';
+// import RaisedButton from 'material-ui/RaisedButton';
 
 class GroupForm extends React.Component {
   constructor(props) {
@@ -46,7 +46,7 @@ class GroupForm extends React.Component {
           value={this.state.description}
           onChange={this.handleChange}/>
 
-        <RaisedButton label={this.props.buttonText} type="submit" />
+        <button label={this.props.buttonText} type="submit"></button>
       </form>
 
     );

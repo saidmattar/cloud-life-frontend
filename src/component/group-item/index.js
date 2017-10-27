@@ -41,14 +41,14 @@ class GroupItem extends React.Component {
           onClick={() => this.handleClick(group, profile)}
           key={profile._id}>{profile.firstName}</div>;}
         )}
+        </div>
 
 //This might not work
-        {this.props.doc.map(doc => {
-          return <div
-          onClick={() => this.handleClick(group, doc)}
-          key={doc._id}>{doc.description}</div>;}
-        )}
-      </div>
+        // {this.props.doc.map(doc => {
+        //   return <div
+        //   onClick={() => this.handleClick(group, doc)}
+        //   key={doc._id}>{doc.description}</div>;}
+        // )}
     );
   }
 }
