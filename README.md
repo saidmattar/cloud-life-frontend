@@ -1,6 +1,5 @@
-# Cloud Life
-### Front End Docs
-//put in some shield.io badges//
+# **Cloud Life**
+# Front End Docs
 
 ![alt](http://www.techquarters.com/wp-content/uploads/backup_animation.gif)
 
@@ -47,18 +46,18 @@ Thanks to our professor, Scott and the various TAs (Izzy, Caleb, Kyle, Allie, Sc
 ## About Us:
 **Said:**
 
-LinkedIn Profile | View My Github
+[LinkedIn Profile](https://www.linkedin.com/in/said-mattar/) | [View My Github](https://github.com/saidmattar)
 
 Motivated former entrepreneur seeking a career in software sales and software development. Experienced in both back-end and front-end technologies with a passion for working with people and teams.
 
 **Isaac:**
 
-LinkedIn Profile | View My Github
+[LinkedIn Profile](https://www.linkedin.com/in/isaacheist/) | [View My Github](https://github.com/esack7)
 
 Isaac Heist is a husband, father, worship pastor, web developer, and aspiring full-stack JavaScript developer. He also once built some pretty sweet kitchen cabinets. He speaks Spanish as a second language and really loves the country of Mexico. He enjoys playing guitar, spending time with his wife, playing with his four kids and tinkering around with computers.
 
 **Michelle:**
 
-LinkedIn Profile | View My Github
+[LinkedIn Profile](https://www.linkedin.com/in/mscharlock/) | [View My Github](https://github.com/mscharlock)
 
 Michelle Scharlock is a Full Stack Javascript developer, with a passion for front-end and project management. A strategic thinker and planning powerhouse, she brings insight to the surface and translates dev-speak for the non-technical. Along with being fluent in JavaScript, Michelle speaks French, German, and Italian thanks to her background as an opera singer. In her spare time (ha!), she can be found hunting for antiques, taking ukulele lessons, and writing plays. Insatiably curious, she is probably raiding your local library right this minute.
