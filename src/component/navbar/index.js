@@ -10,7 +10,7 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <header>
+      <header className="nav-bar">
         {this.props.auth && this.props.profile ?
           <div className="profile-header">
             <h2>Welcome {this.props.profile.username}</h2>
@@ -23,15 +23,15 @@ class Navbar extends React.Component {
           <ul>
             {this.props.auth ?
               <div>
-                <li onClick={this.props.tokenDelete}><Link to="/">Logout</Link></li>
+                <li onClick={this.props.tokenDelete}><Link to="/"><button type="button">Logout</button></Link></li>
                 <li><Link to="/settings">Settings</Link></li>
                 <li><Link to="/dashboard">Dashboard</Link></li>
-                <li><Link to="/group">Grouppppppppp</Link></li>
+                <li><Link to="/group">Group</Link></li>
 
               </div>
               :
               <div>
-                <li><Link to="/welcome/signup">Signup</Link></li>
+                <li><Link to="/welcome/signup"><span>Signup</span></Link></li>
                 <li><Link to="/welcome/login">Login</Link></li>
               </div>
             }

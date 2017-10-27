@@ -38,4 +38,4 @@ export const loginRequest = user => dispatch => {
 export const tokenDeleteRequest = () => dispatch => {
   utils.cookieDelete('X-Cloud-Life-Token');
   dispatch(tokenDelete());
-};
+}; 
