@@ -8,7 +8,7 @@ import * as utils from '../../lib/utils';
 class DocumentContainer extends React.Component {
 
   render() {
-    console.log('PROPS', this.props);
+    // console.log('PROPS', this.props);
     return (
       <div className="document-container">
       <h2>SOMETHING IS HERE IN THE DOCUMENT CONTAINER</h2>
