@@ -1,3 +1,5 @@
+import './_document-container.scss';
+
 import React from 'react';
 import {connect} from 'react-redux';
 import DocItem from '../document-item';
@@ -11,7 +13,6 @@ class DocumentContainer extends React.Component {
     // console.log('PROPS', this.props);
     return (
       <div className="document-container">
-      <h2>Upload and View Your Documents</h2>
       {this.props.docs.map(doc => <DocItem key={doc._id} doc={doc}/>)}
 
       </div>
