@@ -4,20 +4,17 @@
 
 
 .nav-bar {
- background: linear-gradient(#1E5621, white);
-  text-align:right;
-  width: auto;
+ background-color: $darkgrey;
+  color: white;
+  height: 100%;
+  margin-bottom: 30px;
 }
 
-
- // a {
- //
- //   display: inline-block;
- //   border-radius: 4px;
- //   font-family: "arial-black";
- //   font-size: 14px;
- //   color: #FFF;
- //   padding: 8px 12px;
- //   cursor: pointer;
- //
- // }
+li {
+   border-radius: 4px;
+   font-family: "arial-black";
+   font-size: 14px;
+   color: #FFF;
+   padding: 8px 12px;
+   cursor: pointer;
+ }
